@@ -1,7 +1,11 @@
 import React from 'react';
+import { Nav } from '../../components/nav';
 
 import './home.scss';
 
 export const Home = () => (
-  <div className="home" />
+  <>
+    <Nav />
+    <div className="home" />
+  </>
 );
