@@ -1,12 +1,14 @@
 import React from 'react';
 import { OurNavBar } from '../../components/navbar';
-import Button from 'react-bootstrap/Button';
+import { BigCard } from '../../components/big-card';
 
 import './home.scss';
 
 export const Home = () => (
   <>
     <OurNavBar />
-    <Button variant="primary">Primary</Button>
+    <div className="home_card_layout">
+      <BigCard bigText="Find Your Race" />
+    </div>
   </>
 );

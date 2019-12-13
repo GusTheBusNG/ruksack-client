@@ -1,0 +1,28 @@
+@import '../../variables.scss';
+
+.big_card {
+  height: 80vh;
+  width: 95vw;
+
+  background-image: url(https://res.cloudinary.com/dnglix0tu/image/upload/v1576271971/bike%20registration/home.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: $border-radius;
+
+  &__shade {
+    display: flex;
+    height: 100%;
+    width: 100%;
+
+    justify-content: center;
+
+    background-color: rgba(39,36,29,0.5);
+    border-radius: $border-radius;
+  }
+
+  &__text {
+    margin-top: $lg;
+
+    color: $light-white;
+  }
+}

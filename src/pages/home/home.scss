@@ -1,0 +1,11 @@
+.home_card_layout {
+  display: grid;
+
+  margin-top: 2rem;
+
+  grid-column: repeat(1, auto);
+  grid-row: repeat(3, auto);
+
+  justify-content: center;
+  align-items: center;
+}
