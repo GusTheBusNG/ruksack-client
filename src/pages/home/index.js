@@ -1,11 +1,12 @@
 import React from 'react';
-import { Nav } from '../../components/nav';
+import { OurNavBar } from '../../components/navbar';
+import Button from 'react-bootstrap/Button';
 
 import './home.scss';
 
 export const Home = () => (
   <>
-    <Nav />
-    <div className="home" />
+    <OurNavBar />
+    <Button variant="primary">Primary</Button>
   </>
 );

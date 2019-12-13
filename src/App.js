@@ -1,5 +1,4 @@
 import React from 'react';
-import CssBaseline from '@material-ui/core/CssBaseline';
 import {
   BrowserRouter as Router,
   Switch,
@@ -9,9 +8,11 @@ import {
 import { Home } from './pages/home';
 import { Login } from './pages/login';
 
+import './app.scss';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 const App = () => (
   <Router>
-    <CssBaseline />
     <div>
       <Switch>
         <Route path="/login">

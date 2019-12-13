@@ -1,0 +1,28 @@
+@import 'variables.scss';
+@import 'breakpoints.scss';
+
+body {
+  font-family: Roboto;
+  background-color: $background-white;
+}
+
+h1 {
+  font-size: $text-lg;
+  margin: 0;
+}
+
+h2 {
+  font-size: $text-md-lg;
+  font-weight: normal;
+  margin: 0;
+}
+
+h3 {
+  font-size: $text-md;
+  margin: 0;
+}
+
+p {
+  font-size: $text-sm;
+  margin: 0;
+}
