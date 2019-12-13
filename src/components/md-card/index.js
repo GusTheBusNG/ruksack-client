@@ -8,7 +8,7 @@ export const MediumCard = ({
 }) => (
   <div className="md_card" style={{ backgroundImage: `url(${backgroundImageUrl})`}}>
     <div className="md_card__shade">
-      <h3 className="md_card__text">{bigText}</h3>
+      <h2 className="md_card__text">{bigText}</h2>
     </div>
   </div>
 );

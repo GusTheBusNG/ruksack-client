@@ -1,8 +1,9 @@
 @import '../../variables.scss';
+@import '../../breakpoints.scss';
 
 .big_card {
-  height: 80vh;
-  width: 95vw;
+  height: 100%;
+  width: 100%;
 
   background-image: url(https://res.cloudinary.com/dnglix0tu/image/upload/v1576271971/bike%20registration/home.jpg);
   background-repeat: no-repeat;
@@ -24,5 +25,9 @@
     margin-top: $lg;
 
     color: $light-white;
+
+    @include md {
+      font-size: 42px;
+    }
   }
 }

@@ -1,15 +1,28 @@
 @import '../../variables.scss';
+@import '../../breakpoints.scss';
 
 .home_card_layout {
   display: grid;
 
   margin: $sm 0;
 
-  grid-column: repeat(1, auto);
-  grid-row: repeat(3, auto);
+  grid-template: 80vh 20vh 20vh / 95vw;
 
   gap: $sm;
 
   justify-content: center;
   align-items: center;
+
+  @include md {
+    grid-template: 80vh 40vh 40vh / 95vw;
+  }
+
+  @include xl {
+    grid-template-columns: 60vw 35vw;
+    grid-template-rows: 45vh 45vh;
+
+    #find-your-race-card {
+      grid-row: 1 / 3;
+    }
+  }
 }

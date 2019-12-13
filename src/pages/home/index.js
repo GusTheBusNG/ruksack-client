@@ -9,7 +9,7 @@ export const Home = () => (
   <>
     <OurNavBar />
     <div className="home_card_layout">
-      <BigCard bigText="Find Your Race" />
+      <BigCard id="find-your-race-card" bigText="Find Your Race" />
       <MediumCard bigText="Create Your Race" />
       <MediumCard
         bigText="View Your Results"
