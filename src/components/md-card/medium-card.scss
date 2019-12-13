@@ -1,0 +1,28 @@
+@import '../../variables.scss';
+
+.md_card {
+  height: 20vh;
+  width: 95vw;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: $border-radius;
+
+  &__shade {
+    display: flex;
+    height: 100%;
+    width: 100%;
+
+    justify-content: center;
+
+    background-color: rgba(39,36,29,0.5);
+    border-radius: $border-radius;
+  }
+
+  &__text {
+    margin-top: $lg;
+
+    color: $light-white;
+  }
+}

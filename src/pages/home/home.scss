@@ -1,10 +1,14 @@
+@import '../../variables.scss';
+
 .home_card_layout {
   display: grid;
 
-  margin-top: 2rem;
+  margin: $sm 0;
 
   grid-column: repeat(1, auto);
   grid-row: repeat(3, auto);
+
+  gap: $sm;
 
   justify-content: center;
   align-items: center;
