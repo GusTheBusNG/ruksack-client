@@ -1,16 +1,19 @@
 import {
+  AUTHENTICATE_ERROR,
+  AUTHENTICATE_LOADING,
+  AUTHENTICATE_SUCCESS,
   SIGNUP_ERROR,
   SIGNUP_LOADING,
   SIGNUP_SUCCESS
 } from '../actions/user';
 
-const initailState = {
+const initialState = {
   loading: false,
   error: null,
   data: null
 };
 
-const signUp = (state = initailState, action) => {
+export const signUp = (state = initialState, action) => {
   switch (action.type) {
     case SIGNUP_LOADING:
       return {
@@ -37,4 +40,29 @@ const signUp = (state = initailState, action) => {
   }
 }
 
-export default signUp;
+export const authenticate = (state = initialState, action) => {
+  switch (action.type) {
+    case AUTHENTICATE_LOADING:
+      return {
+        ...state,
+        loading: true
+      };
+  
+    case AUTHENTICATE_SUCCESS:
+      return {
+        ...state,
+        loading: false,
+        data: action.data
+      };
+
+    case AUTHENTICATE_ERROR:
+      return {
+        ...state,
+        loading: false,
+        error: action.error
+      }
+
+    default:
+      return state;
+  }
+}

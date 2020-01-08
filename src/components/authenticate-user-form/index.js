@@ -5,7 +5,7 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import isEmail from 'validator/es/lib/isEmail';
 
-const NewUserForm = ({ signUp, loading, error, data }) => {
+const AuthenticateUserForm = ({ authenticate, loading, error, data }) => {
   const [validated, setValidated] = useState(false);
 
   const handleSubmit = event => {
@@ -20,44 +20,36 @@ const NewUserForm = ({ signUp, loading, error, data }) => {
 
     setValidated(true);
 
-    signUp({
+    authenticate({
       email: form['formBasicEmail'].value,
       password: form['formBasicPassword'].value
     });
   };
-
-  console.log('data', data)
 
   return (
     <Form noValidate validated={validated} onSubmit={handleSubmit}>
       <Form.Group controlId="formBasicEmail">
         <Form.Label>Email address</Form.Label>
         <Form.Control type="email" placeholder="Enter email" />
-        <Form.Text className="text-muted">
-          We'll never share your email with anyone else.
-        </Form.Text>
       </Form.Group>
 
       <Form.Group controlId="formBasicPassword">
         <Form.Label>Password</Form.Label>
         <Form.Control type="password" placeholder="Password" />
       </Form.Group>
-      <Form.Group controlId="formBasicCheckbox">
-        <Form.Check type="checkbox" label="Check me out" />
-      </Form.Group>
       <Button variant="primary" type="submit">
-        { loading ? "loading" : "Submit" }
+        { loading ? "loading" : "Login" }
       </Button>
     </Form>
   );
 }
 
 const mapStateToProps = state => ({
-  loading: state.signUp.loading,
-  error: state.signUp.error,
-  data: state.signUp.data
+  loading: state.authenticate.loading,
+  error: state.authenticate.error,
+  data: state.authenticate.data
 });
 
-const mapDispatchToProps = { signUp: actions.signUp }
+const mapDispatchToProps = { authenticate: actions.authenticate }
 
-export default connect(mapStateToProps, mapDispatchToProps)(NewUserForm);
+export default connect(mapStateToProps, mapDispatchToProps)(AuthenticateUserForm);

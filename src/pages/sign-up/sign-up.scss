@@ -1,4 +1,5 @@
 @import "../../variables.scss";
+@import "../../breakpoints.scss";
 
 .sign_up {
   min-height: 100vh;
@@ -11,5 +12,13 @@
   &__heading {
     color: $light-white;
     margin: $md 0;
+  }
+
+  @include md {
+    padding: $md 15vw;
+  }
+
+  @include lg {
+    padding: $md 30vw;
   }
 }
