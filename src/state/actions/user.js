@@ -21,7 +21,7 @@ export const signUp = ({ email, password }) => async dispatch => {
 
     setJWT(data.auth);
 
-    dispatch({ type: SIGNUP_SUCCESS, data: data});
+    dispatch({ type: SIGNUP_SUCCESS, data: data });
   } catch (error) {
     dispatch({ type: SIGNUP_ERROR });
   }
