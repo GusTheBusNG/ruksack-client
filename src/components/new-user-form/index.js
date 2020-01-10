@@ -28,8 +28,6 @@ const NewUserForm = ({ signUp, loading, error, data }) => {
     });
   };
 
-  console.log('data', data)
-
   return (
     <Form noValidate validated={validated} onSubmit={handleSubmit}>
       <Form.Group controlId="formBasicEmail">
@@ -48,7 +46,7 @@ const NewUserForm = ({ signUp, loading, error, data }) => {
         <Form.Check type="checkbox" label="Check me out" />
       </Form.Group>
       <Button variant="primary" type="submit">
-        { loading ? "loading" : "Submit" }
+        { loading ? "Loading..." : "Submit" }
       </Button>
     </Form>
   );

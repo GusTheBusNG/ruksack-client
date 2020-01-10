@@ -9,6 +9,8 @@ const AuthenticateUserForm = ({ authenticate, loading, error, data }) => {
   const [validated, setValidated] = useState(false);
 
   const handleSubmit = event => {
+    event.preventDefault();
+
     const form = event.currentTarget;
 
     isEmail(form['formBasicEmail'].value)
@@ -38,7 +40,7 @@ const AuthenticateUserForm = ({ authenticate, loading, error, data }) => {
         <Form.Control type="password" placeholder="Password" />
       </Form.Group>
       <Button variant="primary" type="submit">
-        { loading ? "loading" : "Login" }
+        { loading ? "Loading..." : "Login" }
       </Button>
     </Form>
   );

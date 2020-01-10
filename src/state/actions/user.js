@@ -3,14 +3,12 @@ import axios from '../../lib/axios';
 export const SIGNUP_LOADING = 'SIGNUP_LOADING';
 export const SIGNUP_SUCCESS = 'SIGNUP_SUCCESS';
 export const SIGNUP_ERROR = 'SIGNUP_ERROR';
-export const AUTHENTICATE_LOADING = 'SIGNUP_LOADING';
-export const AUTHENTICATE_SUCCESS = 'SIGNUP_SUCCESS';
-export const AUTHENTICATE_ERROR = 'SIGNUP_ERROR';
+export const AUTHENTICATE_LOADING = 'AUTHENTICATE_LOADING';
+export const AUTHENTICATE_SUCCESS = 'AUTHENTICATE_SUCCESS';
+export const AUTHENTICATE_ERROR = 'AUTHENTICATE_ERROR';
 
 export const signUp = ({ email, password }) => async dispatch => {
   dispatch({ type: SIGNUP_LOADING });
-
-  console.log('hit');
 
   try {
     const { data } = await axios.post('new-user', {
