@@ -9,6 +9,8 @@ const NewUserForm = ({ signUp, loading, error, data }) => {
   const [validated, setValidated] = useState(false);
 
   const handleSubmit = event => {
+    event.preventDefault();
+
     const form = event.currentTarget;
 
     isEmail(form['formBasicEmail'].value)
