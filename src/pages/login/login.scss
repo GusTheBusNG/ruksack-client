@@ -1,5 +1,15 @@
+@import "../../variables.scss";
+
 .login {
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
-  background-color: blue;
+
+  padding: $md 5vw;
+
+  background: linear-gradient(to bottom right, #38bec9 30%, #4098d7 100%);
+
+  &__heading {
+    color: $light-white;
+    margin: $md 0;
+  }
 }
